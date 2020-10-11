@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import { view } from './utils/view3';
+import { view } from './utils/view6';
 
 const run = async () => {
     try {
