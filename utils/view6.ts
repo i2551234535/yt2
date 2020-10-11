@@ -38,9 +38,11 @@ export const view = async (url: string) => {
                 timezoneId: profileData.timezone_id,
             });
 
-            if (profileData.cookies) {
-                await context.addCookies(JSON.parse(profileData.cookies));
-            }
+            try {
+                if (profileData.cookies) {
+                    await context.addCookies(JSON.parse(profileData.cookies));
+                }
+            } catch (error) {}
 
             const page = await context.newPage();
 
