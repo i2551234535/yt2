@@ -71,11 +71,13 @@ export const view = async (url: string) => {
             } else if (random === 10) {
                 await viewAtGsmArena(page, url);
             } else if (random === 11) {
-                await viewAtCnet(page, url);
+                await page.goto('https://m.youtube.com');
+                timeout = 1000;
             } else if (random === 12) {
-                await page.goto(
-                    'http://gamevn.com/threads/youtube-clips-thu-gian-v56-di-mot-ngay-dang-luom-mot-dong-xu.1077912/page-1964',
-                );
+                // await page.goto(
+                //     'http://gamevn.com/threads/youtube-clips-thu-gian-v56-di-mot-ngay-dang-luom-mot-dong-xu.1077912/page-1964',
+                // );
+                await page.goto('https://m.youtube.com');
                 timeout = 1000;
             } else {
                 await viewRandomAtYoutube(page, url);
