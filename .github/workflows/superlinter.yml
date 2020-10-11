@@ -6,5 +6,8 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - uses: docker://mcr.microsoft.com/playwright:bionic
+            - env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
             - run: yarn
             - run: yarn ts-node index.ts
