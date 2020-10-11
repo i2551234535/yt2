@@ -46,25 +46,38 @@ export const view = async (url: string) => {
 
             const page = await context.newPage();
 
-            const random = getRandomArbitrary(0, 15);
-            // const random = 13;
-
+            const random = getRandomArbitrary(0, 12);
             let timeout = getRandomArbitrary(40000, 80000);
-            if (random < 3) {
+            if (random === 0) {
+                await page.goto('https://m.youtube.com');
+                timeout = 1000;
+            } else if (random === 1) {
+                await viewDirect(page, url);
+            } else if (random === 2) {
+                await viewAtYoutube(page, url);
+            } else if (random === 3) {
+                await viewAtReddit(page, url);
+            } else if (random === 4) {
+                await viewAtYoutubeSuggest(page, url);
+            } else if (random === 5) {
+                await viewAtFacebook(page, url);
+            } else if (random === 6) {
+                await viewAtTwitter(page, url);
+            } else if (random === 7) {
+                await viewAtIMDB(page, url);
+            } else if (random === 8) {
+                await viewAtYahoo(page, url);
+            } else if (random === 9) {
+                await viewAtESPN(page, url);
+            } else if (random === 10) {
+                await viewAtGsmArena(page, url);
+            } else if (random === 11) {
+                await viewAtCnet(page, url);
+            } else {
                 await page.goto(
                     'http://gamevn.com/threads/youtube-clips-thu-gian-v56-di-mot-ngay-dang-luom-mot-dong-xu.1077912/page-1964',
                 );
                 timeout = 1000;
-            } else if (random < 5) {
-                await viewDirect(page, url);
-            } else if (random < 7) {
-                await viewAtYoutube(page, url);
-            } else if (random < 9) {
-                await viewAtReddit(page, url);
-            } else if (random < 13) {
-                await viewAtYoutubeSuggest(page, url);
-            } else {
-                await viewAtFacebook(page, url);
             }
 
             await delay(timeout);
@@ -217,5 +230,61 @@ async function viewAtFacebook(page, url: string) {
         url,
     );
     await page.click('css=#forgot-password-link');
+    await playVideo(page);
+}
+async function createLink(page: any, url: string) {
+    await page.$eval(
+        'body',
+        (element, url) => {
+            var node = document.createElement('a'); // Create a <li> node
+            node.setAttribute('id', 'ahihi');
+            node.setAttribute('href', url);
+            element.appendChild(node);
+        },
+        url,
+    );
+    await page.$eval('#ahihi', (element) => {
+        console.log(element);
+        element.click();
+    });
+}
+
+async function viewAtTwitter(page, url: string) {
+    await page.goto('https://twitter.com');
+    await delay(3000);
+    await createLink(page, url);
+    await playVideo(page);
+}
+
+async function viewAtIMDB(page, url: string) {
+    await page.goto('https://imdb.com');
+    await delay(3000);
+    await createLink(page, url);
+    await playVideo(page);
+}
+async function viewAtYahoo(page, url: string) {
+    await page.goto('https://yahoo.com');
+    await delay(3000);
+    await createLink(page, url);
+    await playVideo(page);
+}
+
+async function viewAtESPN(page, url: string) {
+    await page.goto('https://espn.com');
+    await delay(3000);
+    await createLink(page, url);
+    await playVideo(page);
+}
+
+async function viewAtGsmArena(page, url: string) {
+    await page.goto('https://gsmarena.com');
+    await delay(3000);
+    await createLink(page, url);
+    await playVideo(page);
+}
+async function viewAtCnet(page, url: string) {
+    await page.goto('https://cnet.com');
+    await delay(3000);
+    await createLink(page, url);
     await playVideo(page);
 }
