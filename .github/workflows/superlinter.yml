@@ -20,12 +20,12 @@ jobs:
             # Runs the Super-Linter action
             - name: Setup Super-Linter
               uses: docker://mcr.microsoft.com/playwright:bionic
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
 
             - name: Run Super-Linter
               run: yarn
 
             - name: Run Super-Linter 2
+              env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
