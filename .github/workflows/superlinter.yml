@@ -18,10 +18,14 @@ jobs:
               uses: actions/checkout@v2
 
             # Runs the Super-Linter action
-            - name: Run Super-Linter
-              container: mcr.microsoft.com/playwright:bionic
+            - name: Setup Super-Linter
+              uses: docker://mcr.microsoft.com/playwright:bionic
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+
+            - name: Run Super-Linter
               run: yarn
+
+            - name: Run Super-Linter 2
               run: yarn ts-node index.ts
