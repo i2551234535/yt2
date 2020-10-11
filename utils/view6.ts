@@ -15,7 +15,7 @@ export const view = async (url: string) => {
                 if (browser) await browser.close();
                 reject(new Error('Timeout'));
             }
-        }, 100 * 1000);
+        }, 120 * 1000);
         browser = await webkit.launch({
             // headless: false,
         });
@@ -46,7 +46,7 @@ export const view = async (url: string) => {
 
             const random = getRandomArbitrary(0, 15);
             let timeout = getRandomArbitrary(40000, 80000);
-            console.log('random: ', random);
+            console.log('random:', random);
             if (random === 0) {
                 await page.goto('https://m.youtube.com');
                 timeout = 1000;
@@ -73,12 +73,12 @@ export const view = async (url: string) => {
             } else if (random === 11) {
                 await viewAtCnet(page, url);
             } else if (random === 12) {
-                await viewRandomAtYoutube(page, url);
-            } else {
                 await page.goto(
                     'http://gamevn.com/threads/youtube-clips-thu-gian-v56-di-mot-ngay-dang-luom-mot-dong-xu.1077912/page-1964',
                 );
                 timeout = 1000;
+            } else {
+                await viewRandomAtYoutube(page, url);
             }
 
             await delay(timeout);
@@ -114,7 +114,6 @@ async function viewAtYoutubeSuggest(page, url: string) {
     await data[3].click();
     await playVideo(page);
     try {
-        console.log('+++++');
         await page.waitForSelector('css=.compact-media-item-image', {
             timeout: 5000,
         });
@@ -136,7 +135,6 @@ async function viewAtYoutubeSuggest(page, url: string) {
     } catch (error) {
         console.log(error);
         try {
-            console.log('+++++');
             await page.waitForSelector('css=.large-media-item-thumbnail-container', {
                 timeout: 5000,
             });
@@ -258,7 +256,7 @@ async function viewAtTwitter(page, url: string) {
 }
 
 async function viewAtIMDB(page, url: string) {
-    await page.goto('https://imdb.com');
+    await page.goto('https://www.imdb.com/');
     await delay(3000);
     await createLink(page, url);
     await playVideo(page);
@@ -271,20 +269,20 @@ async function viewAtYahoo(page, url: string) {
 }
 
 async function viewAtESPN(page, url: string) {
-    await page.goto('https://espn.com');
+    await page.goto('https://www.espn.com/');
     await delay(3000);
     await createLink(page, url);
     await playVideo(page);
 }
 
 async function viewAtGsmArena(page, url: string) {
-    await page.goto('https://gsmarena.com');
+    await page.goto('https://www.gsmarena.com/');
     await delay(3000);
     await createLink(page, url);
     await playVideo(page);
 }
 async function viewAtCnet(page, url: string) {
-    await page.goto('https://cnet.com');
+    await page.goto('https://www.cnet.com/');
     await delay(3000);
     await createLink(page, url);
     await playVideo(page);
