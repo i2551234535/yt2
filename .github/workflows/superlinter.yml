@@ -23,5 +23,5 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MONGO_URI: ${{ secrets.MONGO_URI
-        run: echo "Run your script here" }}
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+        run: echo "Run your script here"
