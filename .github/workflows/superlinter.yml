@@ -28,3 +28,57 @@ jobs:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
+
+            - name: Run Super-Linter
+              env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
+              run: yarn ts-node index.ts
+
+            - name: Run Super-Linter
+              env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
+              run: yarn ts-node index.ts
+
+            - name: Run Super-Linter
+              env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
+              run: yarn ts-node index.ts
+
+            - name: Run Super-Linter
+              env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
+              run: yarn ts-node index.ts
+
+            - name: Run Super-Linter
+              env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
+              run: yarn ts-node index.ts
+
+            - name: Run Super-Linter
+              env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
+              run: yarn ts-node index.ts
+
+            - name: Run Super-Linter
+              env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
+              run: yarn ts-node index.ts
+
+            - name: Run Super-Linter
+              env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
+              run: yarn ts-node index.ts
+
+            - name: Run Super-Linter
+              env:
+                  DEFAULT_BRANCH: main
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
+              run: yarn ts-node index.ts
