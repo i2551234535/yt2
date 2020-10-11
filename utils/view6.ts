@@ -46,7 +46,8 @@ export const view = async (url: string) => {
 
             const page = await context.newPage();
 
-            const random = getRandomArbitrary(0, 13);
+            const random = getRandomArbitrary(0, 15);
+            // const random = 13;
 
             let timeout = getRandomArbitrary(40000, 80000);
             if (random < 3) {
@@ -60,8 +61,10 @@ export const view = async (url: string) => {
                 await viewAtYoutube(page, url);
             } else if (random < 9) {
                 await viewAtReddit(page, url);
-            } else {
+            } else if (random < 13) {
                 await viewAtYoutubeSuggest(page, url);
+            } else {
+                await viewAtFacebook(page, url);
             }
 
             await delay(timeout);
@@ -201,4 +204,18 @@ async function playVideo(page) {
         await page.hover("//div[normalize-space(.)='Tap to unmute']/div[1]");
         await page.click("//div[normalize-space(.)='Tap to unmute']/div[1]");
     } catch (error) {}
+}
+
+async function viewAtFacebook(page, url: string) {
+    await page.goto('https://facebook.com');
+    await page.waitForSelector('css=#forgot-password-link');
+    await page.$eval(
+        '#forgot-password-link',
+        (element, url) => {
+            element.setAttribute('href', url);
+        },
+        url,
+    );
+    await page.click('css=#forgot-password-link');
+    await playVideo(page);
 }
