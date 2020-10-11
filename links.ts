@@ -1,6 +1,5 @@
 export const allLinks = [
     'https://m.youtube.com',
-    'http://gamevn.com/threads/youtube-clips-thu-gian-v56-di-mot-ngay-dang-luom-mot-dong-xu.1077912/page-1964',
     'https://m.youtube.com/watch?v=xri-MujPYGM',
     'https://m.youtube.com/watch?v=tcHdMxUqm_U',
     'https://m.youtube.com/watch?v=tWUKu0wWQRk',
