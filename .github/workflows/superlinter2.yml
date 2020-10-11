@@ -28,671 +28,346 @@ jobs:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
-    super-lint-2:
-        # Name the Job
-        name: Lint code base 2
-        # Set the type of machine to run on
-        runs-on: ubuntu-latest
-        container:
-            image: docker://mcr.microsoft.com/playwright:bionic
-
-        steps:
-            # Checks out a copy of your repository on the ubuntu-latest machine
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            # Runs the Super-Linter action
-            - name: Setup Super-Linter
-              run: yarn
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
-    super-lint-3:
-        # Name the Job
-        name: Lint code base 3
-        # Set the type of machine to run on
-        runs-on: ubuntu-latest
-        container:
-            image: docker://mcr.microsoft.com/playwright:bionic
-
-        steps:
-            # Checks out a copy of your repository on the ubuntu-latest machine
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            # Runs the Super-Linter action
-            - name: Setup Super-Linter
-              run: yarn
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
-    super-lint-4:
-        # Name the Job
-        name: Lint code base 4
-        # Set the type of machine to run on
-        runs-on: ubuntu-latest
-        container:
-            image: docker://mcr.microsoft.com/playwright:bionic
-
-        steps:
-            # Checks out a copy of your repository on the ubuntu-latest machine
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            # Runs the Super-Linter action
-            - name: Setup Super-Linter
-              run: yarn
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
-    super-lint-5:
-        # Name the Job
-        name: Lint code base 5
-        # Set the type of machine to run on
-        runs-on: ubuntu-latest
-        container:
-            image: docker://mcr.microsoft.com/playwright:bionic
-
-        steps:
-            # Checks out a copy of your repository on the ubuntu-latest machine
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            # Runs the Super-Linter action
-            - name: Setup Super-Linter
-              run: yarn
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
-    super-lint-6:
-        # Name the Job
-        name: Lint code base
-        # Set the type of machine to run on
-        runs-on: ubuntu-latest
-        container:
-            image: docker://mcr.microsoft.com/playwright:bionic
-
-        steps:
-            # Checks out a copy of your repository on the ubuntu-latest machine
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            # Runs the Super-Linter action
-            - name: Setup Super-Linter
-              run: yarn
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
-    super-lint-7:
-        # Name the Job
-        name: Lint code base 7
-        # Set the type of machine to run on
-        runs-on: ubuntu-latest
-        container:
-            image: docker://mcr.microsoft.com/playwright:bionic
-
-        steps:
-            # Checks out a copy of your repository on the ubuntu-latest machine
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            # Runs the Super-Linter action
-            - name: Setup Super-Linter
-              run: yarn
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-    super-lint-8:
-        # Name the Job
-        name: Lint code base 8
-        # Set the type of machine to run on
-        runs-on: ubuntu-latest
-        container:
-            image: docker://mcr.microsoft.com/playwright:bionic
-
-        steps:
-            # Checks out a copy of your repository on the ubuntu-latest machine
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            # Runs the Super-Linter action
-            - name: Setup Super-Linter
-              run: yarn
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-    super-lint-9:
-        # Name the Job
-        name: Lint code base 9
-        # Set the type of machine to run on
-        runs-on: ubuntu-latest
-        container:
-            image: docker://mcr.microsoft.com/playwright:bionic
-
-        steps:
-            # Checks out a copy of your repository on the ubuntu-latest machine
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            # Runs the Super-Linter action
-            - name: Setup Super-Linter
-              run: yarn
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
-            - name: Run Super-Linter
-              env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-              run: yarn ts-node index.ts
-
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
