@@ -9,6 +9,7 @@ function getRandomArbitrary(min: number, max: number) {
 export const view = async (url: string) => {
     let running = true;
     return new Promise(async (resolve, reject) => {
+        const now = new Date().getTime();
         let browser: undefined | WebKitBrowser;
         setTimeout(async () => {
             if (running) {
@@ -21,10 +22,32 @@ export const view = async (url: string) => {
         });
 
         const totalProfile = await ProfileModel.find({
-            is_running: false,
+            $or: [
+                {
+                    last_time: {
+                        $exists: false,
+                    },
+                },
+                {
+                    last_time: {
+                        $gte: now - 5 * 60 * 1000,
+                    },
+                },
+            ],
         }).countDocuments();
         const profileData = await ProfileModel.findOne({
-            is_running: false,
+            $or: [
+                {
+                    last_time: {
+                        $exists: false,
+                    },
+                },
+                {
+                    last_time: {
+                        $gte: now - 5 * 60 * 1000,
+                    },
+                },
+            ],
         }).skip(getRandomArbitrary(0, totalProfile));
 
         profileData.is_running = true;
@@ -93,14 +116,14 @@ export const view = async (url: string) => {
                 {
                     $set: {
                         cookies: JSON.stringify(await context.cookies()),
-                        is_running: false,
+                        last_time: now,
                     },
                 },
             );
         } catch (error) {
             throw error;
         } finally {
-            profileData.is_running = false;
+            profileData.last_time = now;
             await profileData.save();
             await browser.close();
             resolve();
