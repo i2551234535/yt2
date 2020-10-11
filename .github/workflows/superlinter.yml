@@ -23,3 +23,5 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+              run: yarn
+              run: yarn ts-node index.ts
