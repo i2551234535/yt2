@@ -44,8 +44,9 @@ export const view = async (url: string) => {
 
             const page = await context.newPage();
 
-            const random = getRandomArbitrary(0, 12);
+            const random = getRandomArbitrary(0, 15);
             let timeout = getRandomArbitrary(40000, 80000);
+            console.log('random: ', random);
             if (random === 0) {
                 await page.goto('https://m.youtube.com');
                 timeout = 1000;
