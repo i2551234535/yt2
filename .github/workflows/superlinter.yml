@@ -1,13 +1,16 @@
-name: learn-github-actions
+name: Super-Linter
 on: [push]
 jobs:
     check-bats-version:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
-            - uses: docker://mcr.microsoft.com/playwright:bionic
-            - env:
-                  DEFAULT_BRANCH: main
-                  MONGO_URI: ${{ secrets.MONGO_URI }}
-            - run: yarn
-            - run: yarn ts-node index.ts
+            - name: Checkout code
+                uses: actions/checkout@v2
+
+            - name: Run Super-Linter
+                uses: docker://mcr.microsoft.com/playwright:bionic
+                env:
+                    DEFAULT_BRANCH: main
+                    MONGO_URI: ${{ secrets.MONGO_URI }}
+                run: yarn
+                run: yarn ts-node index.ts
