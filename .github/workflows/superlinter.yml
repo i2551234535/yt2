@@ -19,7 +19,7 @@ jobs:
 
             # Runs the Super-Linter action
             - name: Run Super-Linter
-              uses: docker://mcr.microsoft.com/playwright:bionic
+              container: mcr.microsoft.com/playwright:bionic
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
