@@ -1,0 +1,23 @@
+{
+    "name": "youtube-playwright",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "async": "^3.2.0",
+        "mongoose": "^5.10.8",
+        "playwright": "^1.4.2"
+    },
+    "devDependencies": {
+        "@types/async": "^3.2.3",
+        "@types/mongoose": "^5.7.36",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.3"
+    }
+}

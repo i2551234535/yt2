@@ -1,0 +1,130 @@
+image: registry.gitlab.com/viettd93/youtube-playwright:base-0.1
+
+stages:
+    - build
+    - build2
+    - build3
+    - build4
+    - build5
+    - build6
+    - build7
+
+Build image dev:
+    stage: build
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - dev
+
+Build image master:
+    stage: build
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - master
+
+Build image dev2:
+    stage: build2
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - dev
+
+Build image master2:
+    stage: build2
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - master
+
+Build image dev3:
+    stage: build3
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - dev
+
+Build image master3:
+    stage: build3
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - master
+
+Build image dev4:
+    stage: build4
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - dev
+
+Build image master4:
+    stage: build4
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - master
+
+Build image dev5:
+    stage: build5
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - dev
+
+Build image master5:
+    stage: build5
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - master
+
+Build image dev6:
+    stage: build6
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - dev
+
+Build image master6:
+    stage: build6
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - master
+
+Build image dev7:
+    stage: build7
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - dev
+
+Build image master7:
+    stage: build7
+    script:
+        - yarn
+        - yarn ts-node index.ts
+    only:
+        - master
+
+Build image create_profile:
+    stage: build
+    script:
+        - yarn
+        - yarn ts-node createProfile.ts
+    only:
+        - create_profile
