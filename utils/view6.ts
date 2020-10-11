@@ -27,8 +27,6 @@ export const view = async (url: string) => {
             is_running: false,
         }).skip(getRandomArbitrary(0, totalProfile));
 
-        console.log(profileData);
-
         profileData.is_running = true;
         await profileData.save();
 
@@ -73,6 +71,8 @@ export const view = async (url: string) => {
                 await viewAtGsmArena(page, url);
             } else if (random === 11) {
                 await viewAtCnet(page, url);
+            } else if (random === 12) {
+                await viewRandomAtYoutube(page, url);
             } else {
                 await page.goto(
                     'http://gamevn.com/threads/youtube-clips-thu-gian-v56-di-mot-ngay-dang-luom-mot-dong-xu.1077912/page-1964',
@@ -286,5 +286,16 @@ async function viewAtCnet(page, url: string) {
     await page.goto('https://cnet.com');
     await delay(3000);
     await createLink(page, url);
+    await playVideo(page);
+}
+
+async function viewRandomAtYoutube(page, url: string) {
+    await page.goto('https://m.youtube.com');
+    await page.waitForSelector('css=.large-media-item-thumbnail-container');
+    const data = await page.$$('css=.large-media-item-thumbnail-container');
+    await data[3].scrollIntoViewIfNeeded();
+    await delay(1000);
+    await data[3].hover();
+    await data[3].click();
     await playVideo(page);
 }
