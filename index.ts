@@ -32,8 +32,7 @@ const run2 = async () => {
     await mongoose.connect(process.env.MONGO_URI);
     const promises = [];
     for (let i = 0; i < 50; i++) {
-        const link = 'https://m.youtube.com/watch?v=Kzexvhxqov8';
-        // const link = allLinks[getRandomInt(allLinks.length)];
+        const link = allLinks[getRandomInt(allLinks.length)];
         promises.push((callback) => {
             console.log(i, link);
             view(link)
