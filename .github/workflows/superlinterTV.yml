@@ -376,6 +376,7 @@ jobs:
               run: yarn ts-node indexTV.ts
 
     super-lint-2:
+        needs: super-lint
         # Name the Job
         name: Lint code base
         # Set the type of machine to run on
@@ -744,6 +745,7 @@ jobs:
               run: yarn ts-node indexTV.ts
 
     super-lint-3:
+        needs: super-lint-2
         # Name the Job
         name: Lint code base
         # Set the type of machine to run on
@@ -1112,6 +1114,7 @@ jobs:
               run: yarn ts-node indexTV.ts
 
     super-lint-4:
+        needs: super-lint-3
         # Name the Job
         name: Lint code base
         # Set the type of machine to run on
@@ -1480,6 +1483,7 @@ jobs:
               run: yarn ts-node indexTV.ts
 
     super-lint-5:
+        needs: super-lint-4
         # Name the Job
         name: Lint code base
         # Set the type of machine to run on
