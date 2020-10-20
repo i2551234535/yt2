@@ -22,5 +22,5 @@ jobs:
 
             - name: Run Super-Linter
               env:
-                  DEFAULT_BRANCH: 10k
+                  DEFAULT_BRANCH: tv
               run: yarn ts-node createProfile.ts
