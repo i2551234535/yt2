@@ -23,4 +23,5 @@ jobs:
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: tv
+                  MONGO_URI: ${{ secrets.MONGO_URI }}
               run: yarn ts-node createProfile.ts
