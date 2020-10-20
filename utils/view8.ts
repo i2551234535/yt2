@@ -26,8 +26,7 @@ export const view = async (url: string) => {
         const totalProfile = await ProfileTVModel.find({}).countDocuments();
         const profileData = await ProfileTVModel.findOne({}).skip(getRandomArbitrary(0, totalProfile));
 
-        // profileData.is_running = true;
-        // await profileData.save();
+        await profileData.save();
 
         let viewport: ViewportSize = {
             width: 1280,
@@ -69,9 +68,19 @@ export const view = async (url: string) => {
 
             await page.goto(url);
             await delay(3000);
-            await page.press('body', 'Enter');
+            await page.keyboard.press('Enter');
             await delay(10000);
-            await page.press('body', 'Enter');
+            await page.keyboard.press('Enter');
+            await delay(1000);
+            await page.keyboard.press('ArrowDown');
+            await delay(500);
+            await page.keyboard.press('ArrowDown');
+            await delay(500);
+            await page.keyboard.press('ArrowDown');
+            await delay(500);
+            await page.keyboard.press('ArrowDown');
+            await delay(500);
+            await page.keyboard.press('ArrowDown');
 
             await delay(timeout);
             console.log(await context.cookies());

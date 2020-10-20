@@ -6,7 +6,6 @@ export const PROFILE_TV_COLLECTION_NAME = 'profile_tv';
 export interface ProfileTVDataInterface {
     _id: Types.ObjectId;
     user_agent: string;
-    is_running: boolean;
     cookies?: string;
     last_time?: number;
     size_type: number;
@@ -24,10 +23,6 @@ const statics = {};
 const schema = new mongoose.Schema(
     {
         user_agent: String,
-        is_running: {
-            type: Boolean,
-            default: false,
-        },
         cookies: String,
         last_time: Number,
         size_type: {

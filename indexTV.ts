@@ -1,7 +1,7 @@
 import { parallelLimit } from 'async';
 import * as mongoose from 'mongoose';
-import { allLinks } from './links';
-import { view } from './utils/view7';
+import { allLinks } from './linksTV';
+import { view } from './utils/view8';
 
 function getRandomInt(max: number) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -43,7 +43,7 @@ const run2 = async () => {
                 });
         });
     }
-    parallelLimit(promises, 4, async () => {
+    parallelLimit(promises, 1, async () => {
         await mongoose.disconnect();
         process.exit(0);
     });
