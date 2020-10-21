@@ -73,18 +73,17 @@ export const view = async (url: string) => {
                 await page.goto('https://m.youtube.com');
                 timeout = 1000;
             } else if (random === 12) {
-                await page.goto('https://m.youtube.com');
-                timeout = 1000;
+                await viewAtWeb(page, url, 'https://www.foxnews.com/');
             } else if (random === 13) {
-                await viewAtWeb(page, url, 'https://tinhte.vn/');
+                await viewRandomAtYoutube(page);
             } else if (random === 14) {
                 await viewAtWeb(page, url, 'https://genk.vn/');
             } else if (random === 15) {
-                await viewAtWeb(page, url, 'https://vnexpress.net/');
+                await viewAtWeb(page, url, 'https://www.nbc.com/');
             } else if (random === 16) {
-                await viewAtWeb(page, url, 'https://dantri.com.vn/');
+                await viewAtWeb(page, url, 'https://www.cbs.com/');
             } else if (random === 17) {
-                await viewAtWeb(page, url, 'https://dantri.com.vn/');
+                await viewAtWeb(page, url, 'https://www.foxnews.com/');
             } else if (random === 18) {
                 await viewAtWeb(page, url, 'https://thanhnien.vn/');
             } else if (random === 19) {
@@ -100,7 +99,7 @@ export const view = async (url: string) => {
             } else if (random === 24) {
                 await viewAtWeb(page, url, 'https://lotus.vn/w/');
             } else {
-                await viewRandomAtYoutube(page, url);
+                await viewRandomAtYoutube(page);
             }
 
             await delay(timeout);
@@ -299,7 +298,7 @@ async function viewAtWeb(page, url: string, webUrl: string) {
     await playVideo(page);
 }
 
-async function viewRandomAtYoutube(page, url: string) {
+async function viewRandomAtYoutube(page) {
     await page.goto('https://m.youtube.com');
     await page.waitForSelector('css=.large-media-item-thumbnail-container');
     const data = await page.$$('css=.large-media-item-thumbnail-container');
