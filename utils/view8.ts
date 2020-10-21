@@ -63,6 +63,12 @@ export const view = async (url: string) => {
             const page = await context.newPage();
             step = 2;
 
+            try {
+                if (profileData.cookies) {
+                    await context.addCookies(JSON.parse(profileData.cookies));
+                }
+            } catch (error) {}
+
             const timeout = getRandomArbitrary(40000, 80000);
             console.log(timeout);
 
