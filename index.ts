@@ -49,7 +49,10 @@ const run2 = async () => {
     });
 };
 
-run2();
+run2().catch((e) => {
+    console.error(e);
+    process.exit(0);
+});
 // createDeviceData().then(() => {
 //     console.log('done');
 // });
