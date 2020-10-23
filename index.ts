@@ -49,6 +49,16 @@ const run2 = async () => {
     });
 };
 
+process
+    .on('unhandledRejection', (reason, p) => {
+        console.error(reason, 'Unhandled Rejection at Promise', p);
+        process.exit(0);
+    })
+    .on('uncaughtException', (err) => {
+        console.error(err, 'Uncaught Exception thrown');
+        process.exit(0);
+    });
+
 run2().catch((e) => {
     console.error(e);
     process.exit(0);
