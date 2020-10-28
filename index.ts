@@ -1,29 +1,11 @@
 import { parallelLimit } from 'async';
 import * as mongoose from 'mongoose';
 import { allLinks } from './links';
-import { view } from './utils/view9';
+import { view } from './utils/view10';
 
 function getRandomInt(max: number) {
     return Math.floor(Math.random() * Math.floor(max));
 }
-
-const run = async () => {
-    try {
-        await mongoose.connect(process.env.MONGO_URI);
-        const promises = [];
-        for (let i = 0; i < 10; i++) {
-            promises.push((callback) => {
-                view('https://www.youtube.com/watch?v=c0l3Km1IQfE').then(callback);
-            });
-        }
-        parallelLimit(promises, 5);
-    } catch (error) {
-        console.error(error);
-    } finally {
-        console.log('Done');
-        await mongoose.disconnect();
-    }
-};
 
 const run2 = async () => {
     setTimeout(() => {
@@ -33,14 +15,20 @@ const run2 = async () => {
     const promises = [];
     for (let i = 0; i < 50; i++) {
         const link = allLinks[getRandomInt(allLinks.length)];
+        // const link = 'https://m.youtube.com/watch?v=kkBiTuRXuRM';
         promises.push((callback) => {
             console.log(i, link);
-            view(link)
-                .then(callback)
-                .catch((err) => {
-                    console.error(err);
-                    callback();
-                });
+            setTimeout(() => {
+                view(link)
+                    // .then(() => {
+                    //     return view('https://m.youtube.com/watch?v=kkBiTuRXuRM');
+                    // })
+                    .then(callback)
+                    .catch((err) => {
+                        console.error(err);
+                        callback();
+                    });
+            }, (i % 4) * 3000);
         });
     }
     parallelLimit(promises, 4, async () => {
