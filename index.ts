@@ -1,7 +1,7 @@
 import { parallelLimit } from 'async';
 import * as mongoose from 'mongoose';
 import { allLinks } from './links';
-import { view } from './utils/view10';
+import { view } from './utils/view11';
 
 function getRandomInt(max: number) {
     return Math.floor(Math.random() * Math.floor(max));
