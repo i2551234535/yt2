@@ -115,7 +115,7 @@ export const view = async (url: string) => {
                 },
             );
         } catch (error) {
-            throw error;
+            reject(error);
         } finally {
             profileData.last_time = now;
             await profileData.save();
