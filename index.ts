@@ -1,7 +1,7 @@
 import { parallelLimit } from 'async';
 import * as mongoose from 'mongoose';
 import { allLinks } from './links';
-import { view } from './utils/view12';
+import { view } from './utils/view9';
 
 function getRandomInt(max: number) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -20,9 +20,9 @@ const run2 = async () => {
             console.log(i, link);
             setTimeout(() => {
                 view(link)
-                    // .then(() => {
-                    //     return view('https://m.youtube.com/watch?v=kkBiTuRXuRM');
-                    // })
+                    .then(() => {
+                        return view('https://m.youtube.com/watch?v=kkBiTuRXuRM');
+                    })
                     .then(callback)
                     .catch((err) => {
                         console.error(err);
