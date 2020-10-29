@@ -1,18 +1,30 @@
-import { devices, webkit, WebKitBrowser } from 'playwright';
+import { devices, Route, webkit, WebKitBrowser } from 'playwright';
 import { ProfileModel } from '../models/Profile.model';
 import { delay } from './delay';
 import Axios from 'axios';
+
+const http = require('http');
 
 function getRandomArbitrary(min: number, max: number) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-const proxy = (route, url, method, headers, data) => {
+const proxy = (route: Route, url, method, headers, data) => {
     return Axios.request({
         method: method as any,
         url,
         headers,
         data,
+        // proxy: {
+        //     host: process.env.PROXY_HOST,
+        //     port: Number(process.env.PROXY_PORT),
+        //     auth: {
+        //         username: process.env.PROXY_USER,
+        //         password: process.env.PROXY_PASSWORD,
+        //     },
+        //     protocol: 'http',
+        // },
+        responseType: 'arraybuffer',
         validateStatus: function (status) {
             return true;
         },
@@ -24,8 +36,8 @@ const proxy = (route, url, method, headers, data) => {
                 status: data.status,
                 body: data.data,
                 headers: data.headers,
-                contentType: data.headers['content-type'],
-                path: data.headers['path'],
+                // contentType: data.headers['content-type'],
+                // path: data.headers['path'],
             });
         })
         .catch((e) => console.error(e));
@@ -43,7 +55,7 @@ export const view = async (url: string) => {
             }
         }, 120 * 1000);
         browser = await webkit.launch({
-            headless: false,
+            // headless: false,
         });
 
         const totalProfile = await ProfileModel.find({}).countDocuments();
@@ -93,8 +105,6 @@ export const view = async (url: string) => {
                 if (url.indexOf('/stats/qoe') > -1) {
                     return proxy(route, url, method, headers, data);
                 }
-                return route.continue();
-
                 if (url.indexOf('m.youtube.com/watch') > -1) {
                     return proxy(route, url, method, headers, data);
                 }
@@ -104,7 +114,7 @@ export const view = async (url: string) => {
             const random = getRandomArbitrary(0, 2);
             let timeout = getRandomArbitrary(40000, 80000);
             console.log('random:', random);
-            if (random === -1) {
+            if (random === 0) {
                 await page.goto('https://m.youtube.com');
                 timeout = 1000;
             } else {
@@ -318,7 +328,7 @@ async function viewRandomAtYoutube(page) {
     await page.goto('https://m.youtube.com');
     await page.waitForSelector('css=.large-media-item-thumbnail-container');
     const data = await page.$$('css=.large-media-item-thumbnail-container');
-    const itemIndex = getRandomArbitrary(1, 5);
+    const itemIndex = getRandomArbitrary(1, data.length - 1);
     await data[itemIndex].scrollIntoViewIfNeeded();
     await delay(1000);
     await data[itemIndex].hover();

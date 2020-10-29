@@ -1,11 +1,4 @@
 export const allDevices = [
-    'Galaxy Note 3',
-    'Galaxy Note II',
-    'Galaxy S III',
-    'iPad (gen 6)',
-    'iPad (gen 7)',
-    'iPad Mini',
-    'iPad Pro 11',
     'iPhone 6',
     'iPhone 6 Plus',
     'iPhone 7',
