@@ -27,36 +27,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-2:
@@ -81,36 +109,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-3:
@@ -135,36 +191,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-4:
@@ -189,36 +273,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-5:
@@ -243,36 +355,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-6:
@@ -297,36 +437,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-7:
@@ -351,36 +519,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-8:
@@ -405,36 +601,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-9:
@@ -459,36 +683,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-10:
@@ -513,36 +765,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-11:
@@ -567,36 +847,64 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
 
     super-lint-12:
@@ -621,34 +929,62 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
                   DEFAULT_BRANCH: main
                   MONGO_URI: ${{ secrets.MONGO_URI }}
+                  PROXY_HOST: ${{ secrets.PROXY_HOST }}
+                  PROXY_PORT: ${{ secrets.PROXY_PORT }}
+                  PROXY_USER: ${{ secrets.PROXY_USER }}
+                  PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
               run: yarn ts-node index.ts
