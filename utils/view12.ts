@@ -15,15 +15,15 @@ const proxy = (route: Route, url, method, headers, data) => {
         url,
         headers,
         data,
-        // proxy: {
-        //     host: process.env.PROXY_HOST,
-        //     port: Number(process.env.PROXY_PORT),
-        //     auth: {
-        //         username: process.env.PROXY_USER,
-        //         password: process.env.PROXY_PASSWORD,
-        //     },
-        //     protocol: 'http',
-        // },
+        proxy: {
+            host: process.env.PROXY_HOST,
+            port: Number(process.env.PROXY_PORT),
+            auth: {
+                username: process.env.PROXY_USER,
+                password: process.env.PROXY_PASSWORD,
+            },
+            protocol: 'http',
+        },
         responseType: 'arraybuffer',
         validateStatus: function (status) {
             return true;
