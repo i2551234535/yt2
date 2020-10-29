@@ -90,8 +90,14 @@ export const view = async (url: string) => {
                 //     return route.continue();
                 // }
 
-                if (url.indexOf('/log_event') > -1) {
-                    return route.continue();
+                // if (url.indexOf('/log_event') > -1) {
+                //     return route.continue();
+                // }
+                if (url === 'https://m.youtube.com/') {
+                    return proxy(route, url, method, headers, data);
+                }
+                if (url === 'https://m.youtube.com') {
+                    return proxy(route, url, method, headers, data);
                 }
                 if (url.indexOf('/atr') > -1) {
                     return proxy(route, url, method, headers, data);

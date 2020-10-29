@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
 import * as mongoose from 'mongoose';
 
-export const PROFILE_COLLECTION_NAME = 'profile_4';
+export const PROFILE_COLLECTION_NAME = 'profile_5';
 
 export interface ProfileDataInterface {
     _id: Types.ObjectId;
