@@ -335,9 +335,6 @@ async function viewRandomAtYoutube(page) {
     await page.waitForSelector('css=.large-media-item-thumbnail-container');
     const data = await page.$$('css=.large-media-item-thumbnail-container');
     const itemIndex = getRandomArbitrary(1, data.length - 1);
-    await delay(1000);
-    await data[itemIndex].scrollIntoViewIfNeeded();
-    await delay(1000);
     await data[itemIndex].hover();
     await data[itemIndex].click();
     await playVideo(page);
