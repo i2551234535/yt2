@@ -117,7 +117,7 @@ export const view = async (url: string) => {
                 return route.continue();
             });
 
-            const random = getRandomArbitrary(0, 2);
+            const random = getRandomArbitrary(0, 5);
             let timeout = getRandomArbitrary(40000, 80000);
             console.log('random:', random);
             if (random === 0) {
@@ -335,6 +335,7 @@ async function viewRandomAtYoutube(page) {
     await page.waitForSelector('css=.large-media-item-thumbnail-container');
     const data = await page.$$('css=.large-media-item-thumbnail-container');
     const itemIndex = getRandomArbitrary(1, data.length - 1);
+    await delay(1000);
     await data[itemIndex].scrollIntoViewIfNeeded();
     await delay(1000);
     await data[itemIndex].hover();
