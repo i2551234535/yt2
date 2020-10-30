@@ -85,7 +85,7 @@ export const view = async (url: string) => {
             }
         }, 5 * 60 * 1000);
         browser = await webkit.launch({
-            headless: false,
+            // headless: false,
         });
 
         const totalProfile = await ProfileModel.find({}).countDocuments();
