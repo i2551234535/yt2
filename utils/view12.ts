@@ -177,7 +177,7 @@ export const view = async (url: string) => {
             console.log('random:', random);
             if (random === 0) {
                 await page.goto('https://m.youtube.com');
-                timeout = 1000;
+                timeout = 10000;
             } else {
                 await viewRandomAtYoutube(page);
             }
