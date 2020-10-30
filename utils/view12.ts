@@ -136,7 +136,7 @@ export const view = async (url: string) => {
                     if (url.indexOf('/atr') > -1) {
                         return proxyHTTP(route, url, method, headers, data);
                     }
-                    if (url.indexOf('/pagead/id') > -1) {
+                    if (url.indexOf('/pagead/') > -1) {
                         return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url.indexOf('/api/stats/') > -1) {
@@ -155,6 +155,12 @@ export const view = async (url: string) => {
                         return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url.indexOf('m.youtube.com/watch') > -1) {
+                        return proxyHTTP(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('/generate_204') > -1) {
+                        return proxyHTTP(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('/get_midroll_info') > -1) {
                         return proxyHTTP(route, url, method, headers, data);
                     }
                     return route.continue({
