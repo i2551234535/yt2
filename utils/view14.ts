@@ -60,8 +60,8 @@ const proxyHTTP = (route: Route, url, method, headers, data) => {
         },
     })
         .then((data) => {
-            // console.log(method, url);
-            // console.log(data.status);
+            console.log(method, url);
+            console.log(data.status);
             return route.fulfill({
                 status: data.status,
                 body: data.data,
@@ -178,12 +178,25 @@ export const view = async (url: string) => {
                 });
             });
 
-            const random = getRandomArbitrary(0, 5);
+            const random = getRandomArbitrary(0, 18);
             let timeout = getRandomArbitrary(3 * 60 * 1000, 4 * 60 * 1000);
             console.log('random:', random);
             if (random === 0) {
                 await page.goto('https://m.youtube.com');
                 timeout = 10000;
+            }
+            if (random === 1) {
+                await viewAtYoutubeSuggest(page, url);
+            } else if (random === 2) {
+                await viewDirect(page, url);
+            } else if (random === 3) {
+                await viewAtReddit(page, url);
+            } else if (random === 4) {
+                await viewAtFacebook(page, url);
+            } else if (random === 5) {
+                await viewAtTwitter(page, url);
+            } else if (random === 6) {
+                await viewAtYoutube(page, url);
             } else {
                 await viewRandomAtYoutube(page);
             }
@@ -290,22 +303,7 @@ async function viewAtYoutube(page, url: string) {
 }
 
 async function viewAtReddit(page, url: string) {
-    await page.goto('https://www.reddit.com/r/youtube/comments/hvry3l/youtube_deprecating_5_features_in_playlists/');
-    try {
-        await page.click('text="Continue"', {
-            timeout: 5000,
-        });
-    } catch (error) {}
-
-    await page.$eval(
-        '//*[@id="t3_hvry3l"]/div[2]/div/div/div/div/p[2]/a',
-        (element, url) => {
-            element.setAttribute('href', url);
-        },
-        url,
-    );
-    await page.click('//*[@id="t3_hvry3l"]/div[2]/div/div/div/div/p[2]/a');
-    await playVideo(page);
+    return viewAtWeb(page, url, 'https://www.reddit.com');
 }
 
 async function playVideo(page) {
@@ -323,27 +321,11 @@ async function playVideo(page) {
         await page.hover('css=button.ytp-unmute');
         await page.click('css=button.ytp-unmute');
     } catch (error) {}
-    // try {
-    //     await page.waitForSelector("//div[normalize-space(.)='Tap to unmute']/div[1]", {
-    //         timeout: 5000,
-    //     });
-    //     await page.hover("//div[normalize-space(.)='Tap to unmute']/div[1]");
-    //     await page.click("//div[normalize-space(.)='Tap to unmute']/div[1]");
-    // } catch (error) {}
 }
 
 async function viewAtFacebook(page, url: string) {
     await page.goto('https://facebook.com');
-    await page.waitForSelector('css=#forgot-password-link');
-    await page.$eval(
-        '#forgot-password-link',
-        (element, url) => {
-            element.setAttribute('href', url);
-        },
-        url,
-    );
-    await page.click('css=#forgot-password-link');
-    await playVideo(page);
+    return viewAtWeb(page, url, 'https://facebook.com');
 }
 async function createLink(page: any, url: string) {
     await page.$eval(
