@@ -99,7 +99,7 @@ export const view = async (url: string) => {
 
             const context = await browser.newContext({
                 ...device,
-                timezoneId: profileData.timezone_id,
+                timezoneId: 'Asia/Bangkok',
             });
 
             try {
