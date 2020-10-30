@@ -60,8 +60,8 @@ const proxyHTTP = (route: Route, url, method, headers, data) => {
         },
     })
         .then((data) => {
-            console.log(method, url);
-            console.log(data.status);
+            // console.log(method, url);
+            // console.log(data.status);
             return route.fulfill({
                 status: data.status,
                 body: data.data,
