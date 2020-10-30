@@ -184,8 +184,7 @@ export const view = async (url: string) => {
             if (random === 0) {
                 await page.goto('https://m.youtube.com');
                 timeout = 10000;
-            }
-            if (random === 1) {
+            } else if (random === 1) {
                 await viewAtYoutubeSuggest(page, url);
             } else if (random === 2) {
                 await viewDirect(page, url);
