@@ -178,7 +178,7 @@ export const view = async (url: string) => {
                 });
             });
 
-            const random = getRandomArbitrary(0, 18);
+            const random = getRandomArbitrary(0, 60);
             let timeout = getRandomArbitrary(3 * 60 * 1000, 4 * 60 * 1000);
             console.log('random:', random);
             if (random === 0) {
