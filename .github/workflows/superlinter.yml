@@ -362,7 +362,6 @@ jobs:
               run: yarn ts-node index.ts
 
     super-lint-5:
-        needs: super-lint-4
         # Name the Job
         name: Lint code base
         # Set the type of machine to run on
@@ -718,7 +717,6 @@ jobs:
               run: yarn ts-node index.ts
 
     super-lint-9:
-        needs: super-lint-8
         # Name the Job
         name: Lint code base
         # Set the type of machine to run on
