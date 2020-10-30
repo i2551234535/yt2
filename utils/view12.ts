@@ -2,6 +2,7 @@ import { devices, Route, webkit, WebKitBrowser } from 'playwright';
 import { ProfileModel } from '../models/Profile.model';
 import { delay } from './delay';
 import Axios from 'axios';
+const SocksProxyAgent = require('socks-proxy-agent');
 
 const http = require('http');
 
@@ -9,21 +10,25 @@ function getRandomArbitrary(min: number, max: number) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
+const { PROXY_SOCK5, PROXY_HOST, PROXY_PORT, PROXY_USER, PROXY_PASSWORD } = process.env;
+
 const proxy = (route: Route, url, method, headers, data) => {
+    const httpsAgent = new SocksProxyAgent(PROXY_SOCK5);
     return Axios.request({
         method: method as any,
         url,
         headers,
         data,
-        proxy: {
-            host: process.env.PROXY_HOST,
-            port: Number(process.env.PROXY_PORT),
-            auth: {
-                username: process.env.PROXY_USER,
-                password: process.env.PROXY_PASSWORD,
-            },
-            protocol: 'http',
-        },
+        // proxy: {
+        //     host: PROXY_HOST,
+        //     port: Number(PROXY_PORT),
+        //     auth: {
+        //         username: PROXY_USER,
+        //         password: PROXY_PASSWORD,
+        //     },
+        //     protocol: 'http',
+        // },
+        httpsAgent,
         responseType: 'arraybuffer',
         validateStatus: function (status) {
             return true;
@@ -53,7 +58,7 @@ export const view = async (url: string) => {
                 if (browser) await browser.close();
                 reject(new Error('Timeout'));
             }
-        }, 120 * 1000);
+        }, 5 * 60 * 1000);
         browser = await webkit.launch({
             // headless: false,
         });
@@ -86,39 +91,64 @@ export const view = async (url: string) => {
                 const headers = route.request().headers();
                 const data = route.request().postData();
 
-                // if (url.indexOf('googlevideo.com') > -1) {
-                //     return route.continue();
-                // }
+                if (url.indexOf('googlevideo.com') > -1) {
+                    return route.continue();
+                }
 
-                // if (url.indexOf('/log_event') > -1) {
-                //     return route.continue();
-                // }
-                if (url === 'https://m.youtube.com/') {
-                    return proxy(route, url, method, headers, data);
+                if (url.indexOf('youtube.com') > -1) {
+                    if (url.indexOf('/youtubei/') > -1) {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('/pagead/') > -1) {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url === 'https://m.youtube.com/') {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url === 'https://m.youtube.com') {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('/atr') > -1) {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('/pagead/id') > -1) {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('/api/stats/') > -1) {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('/ptracking') > -1) {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('/get_video_info') > -1) {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('/csi_204') > -1) {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('/pcs/') > -1) {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    if (url.indexOf('m.youtube.com/watch') > -1) {
+                        return proxy(route, url, method, headers, data);
+                    }
+                    return route.continue({
+                        headers: {
+                            'User-Agent':
+                                'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+                            Accept: '*/*',
+                            'Accept-Language': 'en-US,en;q=0.5',
+                        },
+                    });
                 }
-                if (url === 'https://m.youtube.com') {
-                    return proxy(route, url, method, headers, data);
-                }
-                if (url.indexOf('/atr') > -1) {
-                    return proxy(route, url, method, headers, data);
-                }
-                if (url.indexOf('/pagead/id') > -1) {
-                    return proxy(route, url, method, headers, data);
-                }
-                if (url.indexOf('/stats/watchtime') > -1) {
-                    return proxy(route, url, method, headers, data);
-                }
-                if (url.indexOf('/stats/qoe') > -1) {
-                    return proxy(route, url, method, headers, data);
-                }
-                if (url.indexOf('m.youtube.com/watch') > -1) {
-                    return proxy(route, url, method, headers, data);
-                }
-                return route.continue();
+
+                return route.continue({
+                    headers: {},
+                });
             });
 
             const random = getRandomArbitrary(0, 5);
-            let timeout = getRandomArbitrary(40000, 80000);
+            let timeout = getRandomArbitrary(3 * 60 * 1000, 4 * 60 * 1000);
             console.log('random:', random);
             if (random === 0) {
                 await page.goto('https://m.youtube.com');
@@ -140,7 +170,7 @@ export const view = async (url: string) => {
                 },
             );
         } catch (error) {
-            throw error;
+            reject(error);
         } finally {
             profileData.last_time = now;
             await profileData.save();
@@ -331,15 +361,13 @@ async function viewAtWeb(page, url: string, webUrl: string) {
 }
 
 async function viewRandomAtYoutube(page) {
-    try {
-        await page.goto('https://m.youtube.com');
-        await page.waitForSelector('css=.large-media-item-thumbnail-container');
-        const data = await page.$$('css=.large-media-item-thumbnail-container');
-        const itemIndex = getRandomArbitrary(1, data.length - 1);
-        await data[itemIndex].scrollIntoViewIfNeeded();
-        await delay(1000);
-        await data[itemIndex].hover();
-        await data[itemIndex].click();
-        await playVideo(page);
-    } catch (error) {}
+    await page.goto('https://m.youtube.com');
+    await page.waitForSelector('css=.large-media-item-thumbnail-container');
+    const data = await page.$$('css=.large-media-item-thumbnail-container');
+    const itemIndex = getRandomArbitrary(1, data.length - 1);
+    await data[itemIndex].scrollIntoViewIfNeeded();
+    await delay(1000);
+    await data[itemIndex].hover();
+    await data[itemIndex].click();
+    await playVideo(page);
 }

@@ -28,7 +28,7 @@ const run2 = async () => {
                         console.error(err);
                         callback();
                     });
-            }, (i % 4) * 3000);
+            }, (i % 4) * 10000);
         });
     }
     parallelLimit(promises, 4, async () => {

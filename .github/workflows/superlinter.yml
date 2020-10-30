@@ -31,6 +31,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -40,6 +41,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -49,6 +51,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -58,6 +61,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -67,6 +71,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -76,6 +81,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -85,6 +91,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-2:
@@ -113,6 +120,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -122,6 +130,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -131,6 +140,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -140,6 +150,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -149,6 +160,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -158,6 +170,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -167,6 +180,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-3:
@@ -195,6 +209,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -204,6 +219,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -213,6 +229,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -222,6 +239,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -231,6 +249,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -240,6 +259,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -249,6 +269,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-4:
@@ -277,6 +298,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -286,6 +308,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -295,6 +318,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -304,6 +328,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -313,6 +338,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -322,6 +348,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -331,6 +358,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-5:
@@ -359,6 +387,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -368,6 +397,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -377,6 +407,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -386,6 +417,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -395,6 +427,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -404,6 +437,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -413,6 +447,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-6:
@@ -441,6 +476,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -450,6 +486,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -459,6 +496,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -468,6 +506,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -477,6 +516,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -486,6 +526,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -495,6 +536,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-7:
@@ -523,6 +565,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -532,6 +575,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -541,6 +585,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -550,6 +595,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -559,6 +605,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -568,6 +615,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -577,6 +625,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-8:
@@ -605,6 +654,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -614,6 +664,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -623,6 +674,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -632,6 +684,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -641,6 +694,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -650,6 +704,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -659,6 +714,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-9:
@@ -687,6 +743,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -696,6 +753,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -705,6 +763,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -714,6 +773,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -723,6 +783,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -732,6 +793,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -741,6 +803,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-10:
@@ -769,6 +832,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -778,6 +842,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -787,6 +852,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -796,6 +862,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -805,6 +872,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -814,6 +882,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -823,6 +892,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-11:
@@ -851,6 +921,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -860,6 +931,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -869,6 +941,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -878,6 +951,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -887,6 +961,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -896,6 +971,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -905,6 +981,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
 
     super-lint-12:
@@ -933,6 +1010,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -942,6 +1020,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -951,6 +1030,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -960,6 +1040,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -969,6 +1050,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -978,6 +1060,7 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
             - name: Run Super-Linter
               env:
@@ -987,4 +1070,5 @@ jobs:
                   PROXY_PORT: ${{ secrets.PROXY_PORT }}
                   PROXY_USER: ${{ secrets.PROXY_USER }}
                   PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+                  PROXY_SOCK5: ${{ secrets.PROXY_SOCK5 }}
               run: yarn ts-node index.ts
