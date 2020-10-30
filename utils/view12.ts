@@ -12,23 +12,48 @@ function getRandomArbitrary(min: number, max: number) {
 
 const { PROXY_SOCK5, PROXY_HOST, PROXY_PORT, PROXY_USER, PROXY_PASSWORD } = process.env;
 
-const proxy = (route: Route, url, method, headers, data) => {
+const proxyHTTPS = (route: Route, url, method, headers, data) => {
     const httpsAgent = new SocksProxyAgent(PROXY_SOCK5);
     return Axios.request({
         method: method as any,
         url,
         headers,
         data,
-        // proxy: {
-        //     host: PROXY_HOST,
-        //     port: Number(PROXY_PORT),
-        //     auth: {
-        //         username: PROXY_USER,
-        //         password: PROXY_PASSWORD,
-        //     },
-        //     protocol: 'http',
-        // },
         httpsAgent,
+        responseType: 'arraybuffer',
+        validateStatus: function (status) {
+            return true;
+        },
+    })
+        .then((data) => {
+            // console.log(method, url);
+            // console.log(data.status);
+            return route.fulfill({
+                status: data.status,
+                body: data.data,
+                headers: data.headers,
+                // contentType: data.headers['content-type'],
+                // path: data.headers['path'],
+            });
+        })
+        .catch((e) => console.error(e));
+};
+
+const proxyHTTP = (route: Route, url, method, headers, data) => {
+    return Axios.request({
+        method: method as any,
+        url,
+        headers,
+        data,
+        proxy: {
+            host: PROXY_HOST,
+            port: Number(PROXY_PORT),
+            auth: {
+                username: PROXY_USER,
+                password: PROXY_PASSWORD,
+            },
+            protocol: 'http',
+        },
         responseType: 'arraybuffer',
         validateStatus: function (status) {
             return true;
@@ -60,7 +85,7 @@ export const view = async (url: string) => {
             }
         }, 5 * 60 * 1000);
         browser = await webkit.launch({
-            // headless: false,
+            headless: false,
         });
 
         const totalProfile = await ProfileModel.find({}).countDocuments();
@@ -97,40 +122,40 @@ export const view = async (url: string) => {
 
                 if (url.indexOf('youtube.com') > -1) {
                     if (url.indexOf('/youtubei/') > -1) {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTPS(route, url, method, headers, data);
                     }
                     if (url.indexOf('/pagead/') > -1) {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url === 'https://m.youtube.com/') {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url === 'https://m.youtube.com') {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url.indexOf('/atr') > -1) {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url.indexOf('/pagead/id') > -1) {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url.indexOf('/api/stats/') > -1) {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url.indexOf('/ptracking') > -1) {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url.indexOf('/get_video_info') > -1) {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url.indexOf('/csi_204') > -1) {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url.indexOf('/pcs/') > -1) {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     if (url.indexOf('m.youtube.com/watch') > -1) {
-                        return proxy(route, url, method, headers, data);
+                        return proxyHTTP(route, url, method, headers, data);
                     }
                     return route.continue({
                         headers: {
