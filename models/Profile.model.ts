@@ -10,6 +10,7 @@ export interface ProfileDataInterface {
     is_running: boolean;
     cookies?: string;
     last_time?: number;
+    last_time_date_string?: string;
 }
 
 export interface ProfileModelInterface extends mongoose.Document, ProfileDataInterface {
@@ -32,6 +33,7 @@ const schema = new mongoose.Schema(
         cookies: String,
         session_storage: String,
         last_time: Number,
+        last_time_date_string: String,
     },
     {
         timestamps: {

@@ -211,6 +211,7 @@ export const view = async (url: string) => {
                     $set: {
                         cookies: JSON.stringify(await context.cookies()),
                         last_time: now,
+                        last_time_date_string: new Date().toISOString(),
                     },
                 },
             );
@@ -218,6 +219,7 @@ export const view = async (url: string) => {
             reject(error);
         } finally {
             profileData.last_time = now;
+            profileData.last_time_date_string = new Date().toISOString();
             await profileData.save();
             await browser.close();
             resolve();
