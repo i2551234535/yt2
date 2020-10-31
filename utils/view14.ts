@@ -110,13 +110,18 @@ export const view = async (url: string) => {
         try {
             const device = devices[profileData.device_name];
 
+            let timezoneId = profileData.timezone_id;
+            if (profileData.cookies?.length > 0) {
+                timezoneId = 'Asia/Saigon';
+            }
+
             const context = await browser.newContext({
                 ...device,
-                timezoneId: profileData.cookies ? 'Asia/Saigon' : profileData.timezone_id,
+                timezoneId,
             });
 
             try {
-                if (profileData.cookies) {
+                if (profileData.cookies?.length > 0) {
                     await context.addCookies(JSON.parse(profileData.cookies));
                 }
             } catch (error) {}
