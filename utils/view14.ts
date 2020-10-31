@@ -184,19 +184,21 @@ export const view = async (url: string) => {
             if (random === 0) {
                 await page.goto('https://m.youtube.com');
                 timeout = 10000;
-            } else if (random === 1) {
-                await viewAtYoutubeSuggest(page, url);
-            } else if (random === 2) {
-                await viewDirect(page, url);
-            } else if (random === 3) {
-                await viewAtReddit(page, url);
-            } else if (random === 4) {
-                await viewAtFacebook(page, url);
-            } else if (random === 5) {
-                await viewAtTwitter(page, url);
-            } else if (random === 6) {
-                await viewAtYoutube(page, url);
-            } else {
+            }
+            // else if (random === 1) {
+            //     await viewAtYoutubeSuggest(page, url);
+            // } else if (random === 2) {
+            //     await viewDirect(page, url);
+            // } else if (random === 3) {
+            //     await viewAtReddit(page, url);
+            // } else if (random === 4) {
+            //     await viewAtFacebook(page, url);
+            // } else if (random === 5) {
+            //     await viewAtTwitter(page, url);
+            // } else if (random === 6) {
+            //     await viewAtYoutube(page, url);
+            // }
+            else {
                 await viewRandomAtYoutube(page);
             }
 
