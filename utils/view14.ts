@@ -2,6 +2,7 @@ import { devices, Route, webkit, WebKitBrowser } from 'playwright';
 import { ProfileModel } from '../models/Profile.model';
 import { delay } from './delay';
 import Axios from 'axios';
+import { ProfileViewModel } from '../models/ProfileView.model';
 const SocksProxyAgent = require('socks-proxy-agent');
 
 const http = require('http');
@@ -79,6 +80,8 @@ export const view = async (url: string) => {
     let running = true;
     return new Promise(async (resolve, reject) => {
         const now = new Date().getTime();
+        let viewUrl = false;
+        let isViewed = false;
         let browser: undefined | WebKitBrowser;
         setTimeout(async () => {
             if (running) {
@@ -95,6 +98,14 @@ export const view = async (url: string) => {
 
         profileData.is_running = true;
         await profileData.save();
+
+        const profileView = await ProfileViewModel.findOne({
+            profile_id: profileData._id,
+            link: url,
+        });
+        if (profileView) {
+            isViewed = true;
+        }
 
         try {
             const device = devices[profileData.device_name];
@@ -183,24 +194,30 @@ export const view = async (url: string) => {
             const random = getRandomArbitrary(0, 60);
             let timeout = getRandomArbitrary(3 * 60 * 1000, 4 * 60 * 1000);
             console.log('random:', random);
-            if (random === 0) {
+            if (isViewed) {
+                await viewRandomAtYoutube(page);
+            } else if (random === 0) {
                 await page.goto('https://m.youtube.com');
                 timeout = 10000;
-            }
-            // else if (random === 1) {
-            //     await viewAtYoutubeSuggest(page, url);
-            // } else if (random === 2) {
-            //     await viewDirect(page, url);
-            // } else if (random === 3) {
-            //     await viewAtReddit(page, url);
-            // } else if (random === 4) {
-            //     await viewAtFacebook(page, url);
-            // } else if (random === 5) {
-            //     await viewAtTwitter(page, url);
-            // } else if (random === 6) {
-            //     await viewAtYoutube(page, url);
-            // }
-            else {
+            } else if (random === 1) {
+                viewUrl = true;
+                await viewAtYoutubeSuggest(page, url);
+            } else if (random === 2) {
+                viewUrl = true;
+                await viewDirect(page, url);
+            } else if (random === 3) {
+                viewUrl = true;
+                await viewAtReddit(page, url);
+            } else if (random === 4) {
+                viewUrl = true;
+                await viewAtFacebook(page, url);
+            } else if (random === 5) {
+                viewUrl = true;
+                await viewAtTwitter(page, url);
+            } else if (random === 6) {
+                viewUrl = true;
+                await viewAtYoutube(page, url);
+            } else {
                 await viewRandomAtYoutube(page);
             }
 
@@ -217,6 +234,15 @@ export const view = async (url: string) => {
                     },
                 },
             );
+            if (viewUrl) {
+                const newProfileView = new ProfileViewModel({
+                    profile_id: profileData._id,
+                    link: url,
+                    timestamp: now,
+                    time: new Date().toISOString(),
+                });
+                await newProfileView.save();
+            }
         } catch (error) {
             reject(error);
         } finally {
