@@ -15,7 +15,7 @@ const run2 = async () => {
     const promises = [];
     for (let i = 0; i < 40; i++) {
         // const link = allLinks[getRandomInt(allLinks.length)];
-        const link = 'https://m.youtube.com/watch?v=G1uDV4Ggo5E';
+        const link = 'https://m.youtube.com/watch?v=HcTln99Keh4';
         promises.push((callback) => {
             console.log(i, link);
             setTimeout(() => {
@@ -31,7 +31,7 @@ const run2 = async () => {
             }, (i % 4) * 10000);
         });
     }
-    parallelLimit(promises, 4, async () => {
+    parallelLimit(promises, Number(process.env.NUMBER_PARALLEL) || 4, async () => {
         await mongoose.disconnect();
         process.exit(0);
     });

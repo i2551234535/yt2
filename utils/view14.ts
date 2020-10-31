@@ -12,6 +12,8 @@ function getRandomArbitrary(min: number, max: number) {
 
 const { PROXY_SOCK5, PROXY_HOST, PROXY_PORT, PROXY_USER, PROXY_PASSWORD } = process.env;
 
+console.log();
+
 const proxyHTTPS = (route: Route, url, method, headers, data) => {
     const httpsAgent = new SocksProxyAgent(PROXY_SOCK5);
     return Axios.request({
@@ -85,7 +87,7 @@ export const view = async (url: string) => {
             }
         }, 5 * 60 * 1000);
         browser = await webkit.launch({
-            // headless: false,
+            headless: process.env.HEADLESS === '0' ? false : true,
         });
 
         const totalProfile = await ProfileModel.find({}).countDocuments();
