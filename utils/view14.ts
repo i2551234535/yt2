@@ -93,8 +93,11 @@ export const view = async (url: string) => {
             headless: process.env.HEADLESS === '0' ? false : true,
         });
 
-        const totalProfile = await ProfileModel.find({}).countDocuments();
-        const profileData = await ProfileModel.findOne({}).skip(getRandomArbitrary(0, totalProfile));
+        // const totalProfile = await ProfileModel.find({}).countDocuments();
+        // const profileData = await ProfileModel.findOne({}).skip(getRandomArbitrary(0, totalProfile));
+        const profileData = await ProfileModel.findOne({
+            cookies: JSON.stringify([]),
+        });
 
         profileData.is_running = true;
         await profileData.save();
