@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>checkedinlist</key>
+	<dict/>
+	<key>checkedoutlist</key>
+	<dict>
+		<key>81615BC9-AC09-41A8-8928-C4E62A143AF6=https://r2---sn-42u-jmgl.googlevideo.com/videoplayback?expire=1604941095&amp;ei=xyCpX_eoA9OOlQTP2aNI&amp;ip=103.53.170.145&amp;id=o-AITJDCpDN_AYfXw8Gx3eyT_1HeirNB4FePePbBBxRWIW&amp;itag=18&amp;source=youtube&amp;requiressl=yes&amp;mh=pW&amp;mm=31%2C29&amp;mn=sn-42u-jmgl%2Csn-42u-i5ole&amp;ms=au%2Crdu&amp;mv=m&amp;mvi=2&amp;pl=24&amp;initcwndbps=2040000&amp;vprv=1&amp;mime=video%2Fmp4&amp;gir=yes&amp;clen=31457732&amp;ratebypass=yes&amp;dur=511.071&amp;lmt=1604914713898494&amp;mt=1604919398&amp;fvip=2&amp;c=MWEB&amp;txp=6410222&amp;sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&amp;sig=AOq0QJ8wRQIhAOONfET1TZv4gI1_RxqORidFLBuyGL3RwQPWOR7tlxPxAiAcn5WqLd7kQ7s8277SivG01dAV28tiO6F5oP1pavqMdg%3D%3D&amp;lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&amp;lsig=AG3C_xAwRAIgTZJKnHe0tNdc-I4rPiKlmJciHcIeHHBti0J7zhvhKekCIG89p3c2i_8jxCcgweqXV0gj1hBYgeCW4THMgNkLTOWX&amp;cpn=IsvtNw7C1DaYRP_M&amp;cver=2.20201105.01.01&amp;ptk=youtube_single&amp;oid=9yECTsYvrWGkYrg6PTymhw&amp;ptchn=UmRGR3a-g13O6pG927KQmg&amp;pltype=content</key>
+		<string>/Users/viettd/git/yt/profiles/5fa8c41f144b06f55de02d25/MediaCache/CachedMedia-6VFjPw</string>
+	</dict>
+	<key>lastmodpid</key>
+	<integer>23152</integer>
+	<key>lastmodtime</key>
+	<real>626612300.49757397</real>
+	<key>targetfilesize</key>
+	<integer>419430400</integer>
+	<key>targetsize</key>
+	<integer>524288000</integer>
+</dict>
+</plist>

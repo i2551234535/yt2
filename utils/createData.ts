@@ -9,7 +9,7 @@ function getRandomInt(max: number) {
 
 export const createDeviceData = async () => {
     await mongoose.connect(process.env.MONGO_URI);
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 50; i++) {
         const timezoneId = allTimezone[getRandomInt(allTimezone.length)];
         const deviceName = allDevices[getRandomInt(allDevices.length)];
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>checkedinlist</key>
+	<dict>
+		<key>https://r6---sn-42u-i5oel.googlevideo.com/videoplayback?expire=1604925764&amp;ei=5OSoX7bWKPWilQSA6JGwCw&amp;ip=103.53.170.145&amp;id=o-AAz_gYbT349aMBoEBjoB94gfLDqKfaBKKHGmVRB6W6cZ&amp;itag=18&amp;source=youtube&amp;requiressl=yes&amp;mh=is&amp;mm=31%2C26&amp;mn=sn-42u-i5oel%2Csn-npoe7nlz&amp;ms=au%2Conr&amp;mv=m&amp;mvi=6&amp;pl=24&amp;gcr=vn&amp;initcwndbps=2075000&amp;vprv=1&amp;mime=video%2Fmp4&amp;gir=yes&amp;clen=9590291&amp;ratebypass=yes&amp;dur=140.898&amp;lmt=1604893080006468&amp;mt=1604904035&amp;fvip=2&amp;c=MWEB&amp;txp=5530422&amp;sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cgcr%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&amp;sig=AOq0QJ8wRgIhANu4Tvw7Oy03pM2AvA_5k88aDKVNKxkPiXjUKqUX9Qr0AiEA1MagZoVFuLV77qJDw_IdWi4CQhSkBPNjBJSflQK7hK4%3D&amp;lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&amp;lsig=AG3C_xAwRQIhAMBUnuOw2GxYY7eO5pntehRejOsVcFzrHBIhYuvdU8VMAiB4MgF37whdzU_F5N_MxeVsMjxzRo3cEVzutXrYgosS7g%3D%3D&amp;cpn=BnUod5XEbh1KEd1R&amp;cver=2.20201105.01.01&amp;ptk=youtube_single&amp;oid=ncwbWh1Q1LCsMAeryRBocQ&amp;ptchn=IW9cGgoRuGJnky3K3tbzNg&amp;pltype=content</key>
+		<string>/Users/viettd/git/yt/profiles/5fa8c41b144b06f55de02bac/MediaCache/CachedMedia-VrmezK</string>
+	</dict>
+	<key>checkedoutlist</key>
+	<dict>
+		<key>D1F4773E-B306-4C7E-9DEB-639FA6F25F10=https://r1---sn-42u-i5oed.googlevideo.com/videoplayback?expire=1604925775&amp;ei=7-SoX8HLL_uE1d8PmYmU8AQ&amp;ip=103.53.170.145&amp;id=o-ALjizelL7TLueIlFvC18HHKhshc9D4BVdPb3SyGObd4m&amp;itag=18&amp;source=youtube&amp;requiressl=yes&amp;mh=zM&amp;mm=31%2C26&amp;mn=sn-42u-i5oed%2Csn-npoeenek&amp;ms=au%2Conr&amp;mv=m&amp;mvi=1&amp;pl=24&amp;initcwndbps=2150000&amp;vprv=1&amp;mime=video%2Fmp4&amp;gir=yes&amp;clen=9861673&amp;ratebypass=yes&amp;dur=170.898&amp;lmt=1604113570383096&amp;mt=1604904035&amp;fvip=1&amp;c=MWEB&amp;txp=6210222&amp;sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&amp;sig=AOq0QJ8wRAIgezvtlnUgM9T48Ot4WV7wY37S7cfToDTzwRcPD5YtMbsCICc0_OEYy9E7GYWeHBJNt-taqJ1WjUrdlp2O8odkQvut&amp;lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&amp;lsig=AG3C_xAwRQIgSmPDq0XNp2FVMz7AzhbY-XKyRacNv_eFlOQ2HliNoOQCIQCxKPgwbUychHgQzYqm_0vHK--5w1SV1J04I9AC8bXDFg%3D%3D&amp;cpn=21pq9cJjQ2_Blhye&amp;cver=2.20201105.01.01&amp;ptk=youtube_none&amp;pltype=contentugc</key>
+		<string>/Users/viettd/git/yt/profiles/5fa8c41b144b06f55de02bac/MediaCache/CachedMedia-0VXg9w</string>
+	</dict>
+	<key>lastmodpid</key>
+	<integer>9915</integer>
+	<key>lastmodtime</key>
+	<real>626596980.20951295</real>
+	<key>targetfilesize</key>
+	<integer>419430400</integer>
+	<key>targetsize</key>
+	<integer>524288000</integer>
+</dict>
+</plist>

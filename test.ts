@@ -1,16 +1,20 @@
-import * as mongoose from 'mongoose';
-import { view } from './utils/view6';
+import { devices, webkit } from 'playwright';
 
 const run = async () => {
-    try {
-        await mongoose.connect(process.env.MONGO_URI);
-        await view('https://m.youtube.com/watch?v=c0l3Km1IQfE');
-    } catch (error) {
-        console.error(error);
-    } finally {
-        console.log('Done');
-        await mongoose.disconnect();
-    }
+    const device = devices['iPhone 11'];
+    const context = await webkit.launchPersistentContext('./profiles_test/1', {
+        headless: false,
+        ...device,
+    });
+
+    // const context = await browser.newContext({
+    //     ...device,
+    // });
+
+    const page = await context.newPage();
+
+    await page.goto('https://m.youtube.com');
+    // await context.close();
 };
 
 run();
