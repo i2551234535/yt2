@@ -96,20 +96,8 @@ export const view = async (url: string) => {
             }
         }, 5 * 60 * 1000);
 
-        // const totalProfile = await ProfileModel.find({}).countDocuments();
-        // const profileData = await ProfileModel.findOne({}).skip(getRandomArbitrary(0, totalProfile));
-        const profileData = await ProfileModel.findOne({
-            $or: [
-                {
-                    cookies: JSON.stringify([]),
-                },
-                {
-                    cookies: {
-                        $exists: false,
-                    },
-                },
-            ],
-        });
+        const totalProfile = await ProfileModel.find({}).countDocuments();
+        const profileData = await ProfileModel.findOne({}).skip(getRandomArbitrary(0, totalProfile));
 
         profileData.is_running = true;
         await profileData.save();
