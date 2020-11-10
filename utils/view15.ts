@@ -43,7 +43,7 @@ const proxyHTTPS = (route: Route, url, method, headers, data) => {
                 // path: data.headers['path'],
             });
         })
-        .catch((e) => console.error(e));
+        .catch((e) => {});
 };
 
 const proxyHTTP = (route: Route, url, method, headers, data) => {
@@ -77,7 +77,7 @@ const proxyHTTP = (route: Route, url, method, headers, data) => {
                 // path: data.headers['path'],
             });
         })
-        .catch((e) => console.error(e));
+        .catch((e) => {});
 };
 
 export const view = async (url: string) => {
@@ -248,17 +248,21 @@ export const view = async (url: string) => {
                 });
                 await newProfileView.save();
             }
-        } catch (error) {
-            reject(error);
-        } finally {
             try {
                 profileData.last_time = now;
                 profileData.last_time_date_string = new Date().toISOString();
                 await profileData.save();
                 await context.close();
             } catch (error) {}
-
             resolve();
+        } catch (error) {
+            try {
+                profileData.last_time = now;
+                profileData.last_time_date_string = new Date().toISOString();
+                await profileData.save();
+                await context.close();
+            } catch (error) {}
+            reject(error);
         }
     });
 };
