@@ -13,7 +13,7 @@ const run = async () => {
 
     const page = await context.newPage();
 
-    await page.goto('https://m.youtube.com');
+    await page.goto('https://fingerprintjs.com/demo');
     // await context.close();
 };
 

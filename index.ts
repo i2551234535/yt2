@@ -13,7 +13,7 @@ const run2 = async () => {
     }, 50 * 60 * 1000);
     await mongoose.connect(process.env.MONGO_URI);
     const promises = [];
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 40; i++) {
         const link = allLinks[getRandomInt(allLinks.length)];
         // const link = 'https://m.youtube.com/watch?v=HcTln99Keh4';
         promises.push((callback) => {
@@ -25,10 +25,10 @@ const run2 = async () => {
                         console.error(err);
                         callback();
                     });
-            }, (i % 4) * 10000);
+            }, (i % 2) * 10000);
         });
     }
-    parallelLimit(promises, Number(process.env.NUMBER_PARALLEL) || 4, async () => {
+    parallelLimit(promises, Number(process.env.NUMBER_PARALLEL) || 2, async () => {
         await mongoose.disconnect();
         process.exit(0);
     });
