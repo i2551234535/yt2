@@ -13,7 +13,7 @@ const run2 = async () => {
     }, 50 * 60 * 1000);
     await mongoose.connect(process.env.MONGO_URI);
     const promises = [];
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 40; i++) {
         const link = allLinks[getRandomInt(allLinks.length)];
         // const link = 'https://m.youtube.com/watch?v=HcTln99Keh4';
         promises.push((callback) => {
