@@ -196,16 +196,19 @@ export const view = async (url: string) => {
                 return route.continue();
             });
 
-            const random = getRandomArbitrary(0, 60);
-            let timeout = getRandomArbitrary(1.5 * 60 * 1000, 2 * 60 * 1000);
+            const random = getRandomArbitrary(0, 7);
+            let timeout = getRandomArbitrary(2 * 60 * 1000, 3 * 60 * 1000);
             console.log('random:', random);
             if (isViewed) {
-                await viewRandomAtYoutube(page);
+                await viewDirect(page, url);
+                // await viewRandomAtYoutube(page);
             } else if (random === 0) {
-                await page.goto('https://m.youtube.com');
-                timeout = 10000;
+                await viewDirect(page, url);
+                // await page.goto('https://m.youtube.com');
+                // timeout = 10000;
             } else if (random === 1) {
-                await viewRandomAtYoutube(page);
+                await viewDirect(page, url);
+                // await viewRandomAtYoutube(page);
                 // viewUrl = true;
                 // await viewAtYoutubeSuggest(page, url);
             } else if (random === 2) {
