@@ -107,13 +107,21 @@ export const view = async (url: string) => {
                     },
                 },
             );
-        } catch (error) {
-            throw error;
-        } finally {
             profileData.last_time = now;
             await profileData.save();
-            await context.close();
+            try {
+                await context.close();
+            } catch (error) {
+                console.log(error);
+            }
             resolve();
+        } catch (error) {
+            console.log(error);
+            try {
+                await context.close();
+            } catch (error) {
+                console.log(error);
+            }
         }
     });
 };
