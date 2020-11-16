@@ -2,12 +2,12 @@ import * as mongoose from 'mongoose';
 import { allDevices } from './devices';
 import { ProfileModel } from './models/Profile.model';
 import { allTimezone } from './timezoneId';
-import { createDeviceData } from './utils/createData2';
+import { createTVData } from './utils/createDataTV';
 
 function getRandomInt(max: number) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-createDeviceData().then(() => {
+createTVData().then(() => {
     console.log('done');
 });

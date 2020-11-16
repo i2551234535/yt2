@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
 import * as mongoose from 'mongoose';
 
-export const PROFILE_TV_COLLECTION_NAME = 'profile_tv';
+export const PROFILE_TV_COLLECTION_NAME = 'profile_tv_4';
 
 export interface ProfileTVDataInterface {
     _id: Types.ObjectId;
