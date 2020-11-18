@@ -25,7 +25,7 @@ const run2 = async () => {
                 });
         });
     }
-    parallelLimit(promises, Number(process.env.NUMBER_PARALLEL) || 4, async () => {
+    parallelLimit(promises, Number(process.env.NUMBER_PARALLEL) || 2, async () => {
         await mongoose.disconnect();
         process.exit(0);
     });

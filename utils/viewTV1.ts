@@ -66,7 +66,7 @@ export const view = async (url: string) => {
                 }
             } catch (error) {}
 
-            const timeout = getRandomArbitrary(1.5 * 60 * 1000, 2 * 60 * 1000);
+            const timeout = getRandomArbitrary(3 * 60 * 1000, 4 * 60 * 1000);
             console.log(timeout);
 
             await page.goto(url);

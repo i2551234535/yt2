@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
 import { ProfileTVModel } from '../models/ProfileTV.model';
 import { allUserAgent } from '../userAgent';
-import { ViewportSize, chromium } from 'playwright';
+import { ViewportSize, webkit } from 'playwright';
 import { delay } from './delay';
 
 function getRandomInt(max: number) {
@@ -50,10 +50,10 @@ export const createTVData = async () => {
                 break;
         }
 
-        const context = await chromium.launchPersistentContext('./profiles_tv/' + data._id.toHexString(), {
+        const context = await webkit.launchPersistentContext('./profiles_tv_webkit/' + data._id.toHexString(), {
             userAgent: data.user_agent,
             viewport,
-            headless: false,
+            // headless: false,
         });
 
         const page = await context.newPage();
@@ -62,6 +62,9 @@ export const createTVData = async () => {
         await page.keyboard.press('ArrowDown');
         await delay(500);
         await page.keyboard.press('Enter');
+
+        data.cookies = JSON.stringify(await context.cookies());
+        await data.save();
 
         await context.close();
     }
