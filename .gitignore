@@ -101,3 +101,4 @@ static/public/*
 !static/public/.public
 !static/data/.data
 profiles_test
+profiles_tv/
