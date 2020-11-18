@@ -1,4 +1,4 @@
-import { ViewportSize, chromium, BrowserContext } from 'playwright';
+import { ViewportSize, webkit, BrowserContext } from 'playwright';
 import { ProfileTVModel } from '../models/ProfileTV.model';
 import { delay } from './delay';
 
@@ -52,11 +52,14 @@ export const view = async (url: string) => {
         }
 
         try {
-            const context = await chromium.launchPersistentContext('./profiles_tv/' + profileData._id.toHexString(), {
-                userAgent: profileData.user_agent,
-                viewport,
-                headless: process.env.HEADLESS === '0' ? false : true,
-            });
+            const context = await webkit.launchPersistentContext(
+                './profiles_tv_webkit/' + profileData._id.toHexString(),
+                {
+                    userAgent: profileData.user_agent,
+                    viewport,
+                    headless: process.env.HEADLESS === '0' ? false : true,
+                },
+            );
 
             const page = await context.newPage();
 
