@@ -18,7 +18,7 @@ export const view = async (url: string) => {
                 } catch (error) {}
                 reject(new Error('Timeout'));
             }
-        }, 5 * 60 * 1000);
+        }, 30 * 60 * 1000);
 
         const totalProfile = await ProfileTVModel.find({}).countDocuments();
         const profileData = await ProfileTVModel.findOne({}).skip(getRandomArbitrary(0, totalProfile));
@@ -69,7 +69,7 @@ export const view = async (url: string) => {
                 }
             } catch (error) {}
 
-            const timeout = getRandomArbitrary(3 * 60 * 1000, 4 * 60 * 1000);
+            const timeout = getRandomArbitrary(20 * 60 * 1000, 25 * 60 * 1000);
             console.log(timeout);
 
             await page.goto(url);
