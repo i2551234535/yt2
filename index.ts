@@ -1,7 +1,7 @@
 import { parallelLimit } from 'async';
 import * as mongoose from 'mongoose';
 import { allLinks } from './linksTV';
-import { view } from './utils/viewTV1';
+import { view } from './utils/viewTV2';
 
 function getRandomInt(max: number) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -14,7 +14,8 @@ const run2 = async () => {
     await mongoose.connect(process.env.MONGO_URI);
     const promises = [];
     for (let i = 0; i < 50; i++) {
-        const link = allLinks[getRandomInt(allLinks.length)];
+        const link = 'https://www.youtube.com/tv#/watch?v=G1uDV4Ggo5E';
+        // const link = allLinks[getRandomInt(allLinks.length)];
         promises.push((callback) => {
             console.log(i, link);
             view(link)
